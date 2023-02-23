@@ -1,12 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>deepak baria</h1>
+    <h1>Todays task</h1>
+    <h4></h4>
+    <script>
+        //Arrow function
+        let fun = (a, b) => {
+            console.log(a * b)
+        }
+        fun(2, 4)
+
+
+
+
+
+        //gloval variable
+
+        var gv = "Hello world";
+
+        function Message() {
+            return gv;
+        }
+
+        Message(console.log(gv));
+
+
+
+
+
+        //block variable
+
+        let age = 89;
+
+        function Values() {
+            console.log(age);
+        }
+        Values();//Return 89
+
+
+
+
+
+
+
+        //map method each value multiple by 10
+
+        let arr = [1, 2, 3, 4, 5, 6]
+
+        let multi = arr.map(function (value) {
+            return value * 10
+        })
+        console.log(multi) //Return 10,20,30,40,50,60
+
+
+
+
+
+
+
+        //filer method (those who are aligiable to give vote)
+
+        let aligi = [10, 15, 43, 25, 19, 21]
+
+        let ageGreat = aligi.filter((age) => (age >= 18))
+        console.log(ageGreat) //Return 45,25,19,21
+
+
+
+
+
+        //Rest Parameter
+
+        function RestParameter(...args) {
+            return args[1];
+        }
+
+        RestParameter(2, 4, 3, 5);//Return 4
+
+
+
+
+
+
+
+
+        //Spread Operator
+
+        function addNumbers(one,two,three,four) {
+            return one+two+three+four;
+        }
+        let Numbers = [5, 3, 5, 6];
+
+        addNumbers(...Numbers);//Return 5,3,5,6
+
+
+
+
+
+
+
+
+
+        //Array Destructuring
+
+        let arr1 = [5,6,7,8,9,10]
+
+        let [five,six,seven,eight,nine,ten] = arr1
+
+        console.log(five)//Return 5
+        console.log(six)//Return 6
+        console.log(seven)//Return 7
+        console.log(eight)//Return 8
+        console.log(nine)//Return 9
+        console.log(ten)//Return 10
+
+
+
+
+
+
+        //Object Destructuring
+
+        let obj = {
+            name:"Deepak Baria",
+            Age:27,
+        }
+
+        let {name:StudentName,Age:StudentAge} = obj
+
+        console.log(StudentName,StudentAge)
+
+
+
+
+
+
+
+
+
+
+    </script>
 </body>
+
 </html>

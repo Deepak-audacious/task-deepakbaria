@@ -10,25 +10,17 @@ let year = currentDate.getFullYear();
 const date = day + "/" + month + "/" + year;
 console.log(date);
 
- DateAndTime = (date) => {
-    let hours = date.getHours();
-    let minutes = date.getMinutes();
-    let ampm = hours > 12 ? 'pm' : 'am';
-    hours = hours % 12;
-    hours = hours ? hours : 12;
-    var Time = hours + ':' + minutes + ' ' + ampm;
-    return Time;
-  }
-  
-  console.log(DateAndTime(new Date));
+DateAndTime = (date) => {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let ampm = hours > 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  var Time = hours + ":" + minutes + " " + ampm;
+  return Time;
+};
 
-
-
-
-
-
-
-
+console.log(DateAndTime(new Date()));
 
 //Array of Object
 
@@ -59,19 +51,10 @@ obj = [
   },
 ];
 
-
-
-
-
-
-
-
 // Salary added by reduce method.
 
 let sum = obj.map((curr) => curr.salary).reduce((a, b) => a + b, 0);
 console.log(sum);
-
-
 
 //Salary added by for loop.
 add = 0;
@@ -79,9 +62,6 @@ for (var i = 0; i < obj.length; i++) {
   add += obj[i].salary;
 }
 console.log(add);
-
-
-
 
 //Full data.
 for (var i = 0; i < obj.length; i++) {
@@ -93,9 +73,58 @@ for (var i = 0; i < obj.length; i++) {
 
 
 
-//       // foreach loop
-// obj.forEach(function(item, index) {
-//   console.log(item.salary);
-// });
 
 
+
+//Repeated strings count.
+var str = "today is the friday";
+var a = str.split("");
+console.log(a);
+
+var b = [];
+for (i of a) {
+  if (b.indexOf(i) == -1) {
+    b.push(i);
+  }
+}
+for (x of b) {
+  var c = 0;
+  for (i of a) {
+    if (i == x) {
+      c++;
+    }
+  }
+  console.log(`${x}=${c}`);
+}
+
+
+
+
+
+
+
+//Maximum string character replace by p character 
+var maxRepeat = (str) => {
+  let len = str.length;
+  let count = 0;
+  let res = str[0];
+  for (let i = 0; i < len; i++) {
+    let curCount = 1;
+    for (let j = i + 1; j < len; j++) {
+      if (str[i] != str[j]) break;
+      curCount++;
+    }
+    if (curCount > count) {
+      count = curCount;
+      res = str[i];
+    }
+  }
+  return res;
+};
+// console.log(maxRepeating("sdjd kusdhfi kusdhi ksdfi"))
+var str = "krishna paradise rau bypass road behind hardiya hospital indore";
+console.log(maxRepeat(str));
+
+//Replace string
+var Replace = str.replace('s','p')
+console.log(Replace)

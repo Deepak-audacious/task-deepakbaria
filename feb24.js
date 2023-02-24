@@ -94,7 +94,8 @@ for (x of b) {
       c++;
     }
   }
-  console.log(`${x}=${c}`);
+  var counter = console.log(`${x}=${c}`);
+
 }
 
 
@@ -103,28 +104,37 @@ for (x of b) {
 
 
 
-//Maximum string character replace by p character 
-var maxRepeat = (str) => {
-  let len = str.length;
-  let count = 0;
-  let res = str[0];
-  for (let i = 0; i < len; i++) {
-    let curCount = 1;
-    for (let j = i + 1; j < len; j++) {
-      if (str[i] != str[j]) break;
-      curCount++;
-    }
-    if (curCount > count) {
-      count = curCount;
-      res = str[i];
-    }
-  }
-  return res;
-};
-// console.log(maxRepeating("sdjd kusdhfi kusdhi ksdfi"))
-var str = "krishna paradise rau bypass road behind hardiya hospital indore";
-console.log(maxRepeat(str));
 
-//Replace string
-var Replace = str.replace('s','p')
-console.log(Replace)
+
+// //Maximum string character replace by p character 
+// var maxRepeat = (str) => {
+//   let count = 0;
+//   let res = str[0];
+//   for (let i = 0; i < str.length; i++) {
+//     let cur = 1;
+//     for (let j = i + 1; j < str.length; j++) {
+//       if (str[i] != str[j]) 
+//       break;
+//       cur++;
+//     }
+//     if (cur > count) {
+//       count = cur;
+//       res = str[i];
+//     }
+//   }
+//   return res;
+// };
+// // console.log(maxRepeating("sdjd kusdhfi kusdhi ksdfi"))
+// var str = "krishna paradise rau";
+// var repeat = console.log(maxRepeat(str));
+// // console.log(repeat)
+
+// // Replace string
+// var Replace = str.replaceAll(repeat,'e')
+// console.log(Replace)
+
+
+
+
+
+

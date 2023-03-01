@@ -2,7 +2,7 @@
 let Prom = (a,b) => {
   return new Promise((resolve, reject) => {
     console.log("Fetch data please wait");
-    var c = a * b;
+    let c = a * b;
     setTimeout(() => {
       if (c) {
         resolve(`Your Answer ${c}`);

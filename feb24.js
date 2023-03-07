@@ -99,8 +99,34 @@ for (x of b) {
 }
 
 
+let addition = () => {
+  let firstvalue = document.getElementById("fn").value
+  let secondvalue = document.getElementById("sn").value
+  let add = parseInt(firstvalue) + parseInt(secondvalue)
+  document.getElementById("res").value = add
+}
 
 
+let substract = () => {
+  let firstvalue = document.getElementsById("fn").value
+  let secondvalue = document.getElementById("sn").value
+  let sub = parseInt(firstvalue) - parseInt(secondvalue)
+  document.getElementById("res").value = sub
+}
+
+let multiple = () => {
+  let firstvalue = document.getElementById("fn").value
+  let secondvalue = document.getElementById("sn").value
+  let multi = parseInt(firstvalue) * parseInt(secondvalue)
+  document.getElementById("res").value = multi
+}
+
+let divide = () => {
+  let firstvalue = document.getElementById("fn").value
+  let secondvalue = document.getElementsById("sn").value
+  let divi = parseInt(firstvalue) / parseInt(secondvalue)
+  document.getElementsById("res").value = divi
+}
 
 
 
@@ -138,3 +164,90 @@ for (x of b) {
 
 
 
+
+
+
+
+
+// const loadData = async () => {
+//   const url = 'https://jsonplaceholder.typicode.com/todos/1'
+//   const res = await fetch(url);
+//   console.log(res);
+// }
+// loadData();  
+
+
+
+
+
+// let loadData = async() =>{
+//   let url = 'https://jsonplaceholder.typicode.com/todos/1'
+//   let response = await fetch(url)
+//   let data = response.json()
+
+//   console.log(data)
+// }
+// loadData()
+
+
+
+
+let loadData = async () => {
+  try {
+    let url = 'https://jsonplaceholder.typicode.com/todos/1'
+    let response = await fetch(url)
+    let data = await response.json()
+    return data
+  }
+  catch (error) {
+    console.log(error)
+  }
+}
+(async () => {
+  let data = await loadData()
+  console.log(data)
+})()
+
+
+
+
+
+
+
+
+
+
+
+let users = {
+  1: {
+    id: '1',
+    firstName: 'Robin',
+    lastName: 'Wieruch',
+    isDeveloper: true,
+  },
+  2: {
+    id: '2',
+    firstName: 'Dave',
+    lastName: 'Davddis',
+    isDeveloper: false,
+  },
+};
+
+
+const getUsers = () =>
+  new Promise((resolve, reject) => {
+    if (!users) {
+      reject(new Error('Users not found'));
+    }
+
+    resolve(Object.values(users));
+  });
+
+// usage (1)
+getUsers()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });

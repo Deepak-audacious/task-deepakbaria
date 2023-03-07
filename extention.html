@@ -116,6 +116,25 @@
             }
         }
         myFunction()
+
+
+
+
+
+        let setQuote = () =>{
+          let quote = ""
+          return quote;
+        }
+        const getQuote = async () =>{
+          try{
+            let data = await setQuote()
+            console.log("X")
+          }
+          catch(error){
+            console.log(error)
+          }
+        }
+        getQuote()
     </script>
   </body>
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+      let restCalculation = (...args) =>{
+        let sumOfArg = 0
+        let i = 0
+        while(i<args.length){
+            sumOfArg += args[i]
+            i++
+        }
+        return sumOfArg
+      }
+      console.log(restCalculation(1,2,3,4,5))
+
+
+
+      let eachFor = (...args) =>{
+            let sumOfArgs = 0
+            args.forEach((n)=>
+            sumOfArgs += n
+            )
+            return sumOfArgs 
+      }
+      console.log(eachFor(1,2,3,4,5))
+
+
+
+
+      let SpreadOperatorCalculation = (n1,n2,n3,n4,n5) =>{  
+            return n1+n2+n3+n4+n5
+      }
+      let numbers = [1,2,3,4,5]
+      console.log(SpreadOperatorCalculation(...numbers))
+
+
+
+      oldArray = [1,2,3,4,5]
+      newArray = ['a','b','c',...oldArray,6,7,8,9,10]
+      console.log(newArray)
+
+
+
+
+      obj1 = {name:"Deepak",age:34}
+      obj2 = {name:"Rahul",age:45}
+
+      marge = {...obj1,...obj2}
+      console.log(marge)
+
+
+
+      let num = 153;
+      let armstrong = 0
+      let length = 0
+      let temp = num
+      let temp1 = num
+      let reminder; 
+      while(num>0){
+        length++
+        num = parseInt(num/10)
+      }
+      document.write(`Length of number ${length}<br>`)
+      while(temp>0){
+        reminder = temp % 10
+        armstrong = armstrong + (reminder**length)
+        temp = parseInt(temp / 10)
+      }
+      if(temp1 == armstrong){
+        document.write("Armstrong")
+        
+      }
+      else{
+        document.write("Not a Armstrong")
+      }
+
+
+
+
+
+      
+    </script>
+
+
+
+</body>
+
+</html>

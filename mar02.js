@@ -67,13 +67,8 @@ let ArrayOfObject = [
     }
 ]
 
-// Array.prototype.add = function () {
-//     let result = 0;
-//     for (let i = 0;i<this.length;i++){
-//         result +=this[i]
-//     }
-//     return result
-// }
+
+
 
 
 let total=0
